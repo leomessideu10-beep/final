@@ -275,10 +275,10 @@
       gsap.set(jailBgTwo, { opacity: 0 });
       gsap.set(moonWrap, { left: 1306, top: 162, width: 360, xPercent: 0, yPercent: 0, scale: 1, opacity: 1 });
       gsap.set(apolo, { left: 96, top: 389, width: 960, x: 0, y: 0, scale: 1, opacity: 1 });
-      gsap.set(iceImage, { y: 300, opacity: 0 });
+      gsap.set(iceImage, { xPercent: -50, y: 300, opacity: 0 });
       gsap.set([productBefore, productAfter, ...productGhosts], { opacity: 0, scale: 1, x: 0, y: 0 });
       gsap.set([togetherLineOne, togetherLineTwo, togetherLineThree], { opacity: 0, y: 16 });
-      gsap.set(brandLogo, { opacity: 0, left: 960, top: 540, width: 540, scale: 0.96 });
+      gsap.set(brandLogo, { opacity: 0, left: 960, top: 540, width: 540, xPercent: -50, yPercent: -50, scale: 0.96 });
       gsap.set(finalFooter, { opacity: 0, y: 24 });
     }
 
@@ -442,7 +442,7 @@
       tl.to(valueTitleOne, { opacity: step === 28 ? 1 : 0, y: step === 28 ? 0 : 28, duration: step === 28 ? 0.58 : Math.min(duration, 0.24), ease: "power2.out" }, step === 28 ? 0.08 : 0);
       tl.to(valueTitleTwo, { opacity: step === 29 ? 1 : 0, y: step === 29 ? 0 : 28, duration: step === 29 ? 0.58 : Math.min(duration, 0.24), ease: "power2.out" }, step === 29 ? 0.08 : 0);
       tl.to(iceScene, { opacity: step === 30 ? 1 : 0, duration: step === 30 ? 0.38 : Math.min(duration, 0.24), ease: "power2.inOut" }, 0);
-      tl.to(iceImage, { opacity: step === 30 ? 1 : 0, y: step === 30 ? 0 : 300, duration: step === 30 ? 0.82 : Math.min(duration, 0.24), ease: "power3.out" }, 0);
+      tl.to(iceImage, { opacity: step === 30 ? 1 : 0, xPercent: -50, y: step === 30 ? 0 : 300, duration: step === 30 ? 0.82 : Math.min(duration, 0.24), ease: "power3.out" }, 0);
       tl.to(productScene, { opacity: step >= 31 && step <= 37 ? 1 : 0, duration: step === 31 ? 0.62 : Math.min(duration, 0.28), ease: "power2.inOut" }, 0);
       tl.to(productBefore, { opacity: step === 31 ? 1 : 0, duration: step === 31 ? 0.62 : Math.min(duration, 0.2), ease: "power2.inOut" }, 0);
 
@@ -466,7 +466,7 @@
       tl.to(togetherLineTwo, { opacity: step >= 34 && step <= 35 ? 1 : 0, y: step >= 34 && step <= 35 ? 0 : 16, duration: step === 34 ? 0.48 : Math.min(duration, 0.2), ease: "power2.out" }, step === 34 ? 0.1 : 0);
       tl.to(togetherLineThree, { opacity: step === 35 ? 1 : 0, y: step === 35 ? 0 : 16, duration: step === 35 ? 0.48 : Math.min(duration, 0.2), ease: "power2.out" }, step === 35 ? 0.1 : 0);
       const logoVisible = step === 36 || step === 37;
-      tl.to(brandLogo, { opacity: logoVisible ? 1 : 0, left: 960, top: step === 37 ? 380 : 540, width: step === 37 ? 460 : 540, scale: logoVisible ? 1 : 0.96, duration: step === 37 ? 0.72 : step === 36 ? 0.62 : Math.min(duration, 0.22), ease: "power2.out" }, step === 36 || step === 37 ? 0.1 : 0);
+      tl.to(brandLogo, { opacity: logoVisible ? 1 : 0, left: 960, top: step === 37 ? 380 : 540, width: step === 37 ? 460 : 540, xPercent: -50, yPercent: -50, scale: logoVisible ? 1 : 0.96, duration: step === 37 ? 0.72 : step === 36 ? 0.62 : Math.min(duration, 0.22), ease: "power2.out" }, step === 36 || step === 37 ? 0.1 : 0);
       tl.to(footerGradient, { opacity: step === 37 ? 1 : 0, duration: step === 37 ? 0.55 : Math.min(duration, 0.22), ease: "power2.inOut" }, 0);
       tl.to(finalFooter, { opacity: step === 37 ? 1 : 0, y: step === 37 ? 0 : 24, duration: step === 37 ? 0.62 : Math.min(duration, 0.22), ease: "power2.out" }, step === 37 ? 0.12 : 0);
     }
